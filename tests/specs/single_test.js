@@ -1,12 +1,17 @@
-const assert = require('assert');
+describe('foo', () => {
+  beforeEach(() => {
+    browser.reloadSession();
+  });
 
-describe('Google Search Function', () => {
-  it('can find search results', () => {
-    browser.url('https://www.google.com/ncr');
-    const input = $('[name="q"]');
-    input.setValue('test123');
-
+  it('bar', () => {
+    browser.url("https://duckduckgo.com/");
     const title = browser.getTitle();
-    assert.equal(title, 'Google');
+    expect(title).toBe('DuckDuckGo — Privacy, simplified.');
+  });
+
+  it('kaz', () => {
+    browser.url("https://brave.com/");
+    const title = browser.getTitle();
+    expect(title).toBe('Secure, Fast & Private Web Browser with Adblocker | Brave Browser');
   });
 });

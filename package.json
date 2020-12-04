@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run single && npm run parallel && npm run multiple",
     "single": "./node_modules/.bin/wdio conf/single.conf.js",
+    "single-bs": "./node_modules/.bin/wdio conf/single-bs.conf.js",
     "parallel": "./node_modules/.bin/wdio conf/parallel.conf.js",
     "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js"
   },
@@ -25,15 +26,14 @@
   },
   "homepage": "https://github.com/lambdatest/webdriverio-selenium-sample#readme",
   "dependencies": {
-    "chai": "*",
-    "mocha": "^6.0.2",
-    "webdriverio": "^5.6.2"
+    "@wdio/jasmine-framework": "^6.10.4",
+    "webdriverio": "^6.10.5"
   },
   "devDependencies": {
-    "@wdio/cli": "*",
-    "@wdio/local-runner": "*",
-    "@wdio/mocha-framework": "^5.6.0",
-    "@wdio/sync": "*",
-    "wdio-lambdatest-service": "*"
+    "@wdio/browserstack-service": "^6.10.4",
+    "@wdio/cli": "^6.10.5",
+    "@wdio/local-runner": "^6.10.5",
+    "@wdio/sync": "^6.10.4",
+    "wdio-lambdatest-service": "1.0.2"
   }
 }
